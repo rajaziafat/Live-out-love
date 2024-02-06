@@ -7,7 +7,7 @@
   "main": "tailwind.config.js",
   
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./output.css --watch"
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./output.css"
   },
   "keywords": [],
   "author": "",
