@@ -27,8 +27,15 @@
         <!-- Links  -->
         <!-- for PC  -->
         <div
-          class="hidden lg:flex items-center justify-center uppercase text-[white] gap-[50px] font-[600] text-[15px] font-poppins tracking-[1px]"
+          id="menu"
+          class="flex flex-col lg:flex-row transition translate-x-[100%] lg:translate-x-[0px] top-0 right-0 h-[100dvh] lg:px-0 px-[30px] lg:h-auto w-[300px] bg-[#132735] lg:bg-transparent lg:w-auto fixed lg:relative items-center justify-center uppercase text-[white] gap-[50px] font-[600] text-[15px] font-poppins tracking-[1px]"
         >
+          <div
+            onclick="toggleMenu()"
+            class="absolute top-[20px] lg:hidden right-[20px] text-[20px] cursor-pointer"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
           <a
             href="#"
             class="border-b-[3px] border-transparent hover:border-[#E7007C] px-[3px] transition"
@@ -64,7 +71,11 @@
           ></a>
         </div>
         <!-- for Mobile -->
-        <div class="lg:hidden">
+        <div
+          onclick="toggleMenu()"
+          id="menu-btn"
+          class="lg:hidden cursor-pointer"
+        >
           <i class="fa-solid fa-bars text-[white] text-[27px]"></i>
         </div>
       </nav>
@@ -120,7 +131,6 @@
         />
       </section>
     </div>
-
     <!-- Real Change Section  -->
     <div class="w-full">
       <section
@@ -182,7 +192,6 @@
         </div>
       </section>
     </div>
-
     <!-- Video Sectoion  -->
     <section
       class="wrapper mt-[45px] sm:mt-[45px] md:mt-[90px] 1100:mt-[20px] 2xl:mt-[70px]"
@@ -476,8 +485,12 @@
       </div>
     </section>
     <!-- Donation Section  -->
-    <section class="wrapper max-w-[1920px] mx-auto bg-[#6A00E4] relative overflow-hidden">
-      <div class="content 1300:px-0 px-[20px] flex items-center 1100:items-start justify-center flex-col relative pt-[70px] sm:pt-[100px] pb-[50px] 1100:pb-[110px]">
+    <section
+      class="wrapper max-w-[1920px] mx-auto bg-[#6A00E4] relative overflow-hidden"
+    >
+      <div
+        class="content 1300:px-0 px-[20px] flex items-center 1100:items-start justify-center flex-col relative pt-[70px] sm:pt-[100px] pb-[50px] 1100:pb-[110px]"
+      >
         <h3
           class="font-montserrat text-[28px] sm:text-[40px] uppercase text-center 1100:text-start text-white 1300:text-[50px] font-[800] leading-[1.05]"
         >
@@ -496,7 +509,9 @@
           something you can be a part of please hit the button below and join us
           in changing the world
         </p>
-        <div class="w-full sm:w-[620px] sm:h-[450px] 1100:absolute right-[-8%] 2xl:right-[-10%] 1100:mt-0 mt-[40px]">
+        <div
+          class="w-full sm:w-[620px] sm:h-[450px] 1100:absolute right-[-8%] 2xl:right-[-10%] 1100:mt-0 mt-[40px]"
+        >
           <img
             src="./assets/imgs/d-1.png"
             class="w-full sm:max-w-[440px] sm:float-end"
@@ -510,5 +525,244 @@
         </div>
       </div>
     </section>
+    <!-- Meet JennSection  -->
+    <section
+      class="w-full max-w-[1920px] relative mx-auto wrapper overflow-hidden"
+    >
+      <div class="content">
+        <div
+          class="w-full grid lg:grid-cols-2 gap-[50px] pt-[100px] sm:pt-[130px] pb-[100px] lg:pb-[165px] px-[20px] 1300:px-0"
+        >
+          <div class="relative">
+            <img
+              src="./assets/imgs/star-flourish.png"
+              class="w-full max-w-[150px] absolute top-[-70px] left-[-75px] z-[-1]"
+              alt=""
+            />
+            <img src="./assets/imgs/jani.png" class="w-full" alt="" />
+          </div>
+          <div class="flex items-start justify-between flex-col">
+            <h5 class="text-[#6A00E4] font-[800] font-montserrat text-[18px]">
+              A LIVE OUT LOVE STORY
+            </h5>
+            <h3
+              class="font-montserrat text-[28px] sm:text-[40px] uppercase text-start text-white 1300:text-[50px] font-[800] leading-[1.05]"
+            >
+              MEET JENNIFER
+            </h3>
+            <p
+              class="font-[300] text-[#ffffff] text-start 1300:text-[19px] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+            >
+              Amidst a relentless, three-day downpour that battered the city,
+              our Live Out Love street team embarked on its home less outreach
+              mission, in the midst of freezing cold weather. We ventured
+              through the soa streets, our hands and backpacks overloaded with
+              tents and sleeping bags, winter socks and winter hats offering a
+              moment of love and hope to those stranded on streets that don't
+              offer much hope. It was during this mission that we stumbled upon
+              a small tent camp that housed a women who seemed to belong, and
+              yet, her eyes held a deep fear and pain too deep to imagine.
+            </p>
+            <a
+              href="#"
+              class="h-[40px] all-center gap-[10px] pr-[7px] font-[700] text-[]"
+            >
+              <span class="pr-[10px] text-[#42c3f6]">Read more</span>
+              <div
+                class="flex items-center justify-center h-[28px] w-[28px] bg-[#132735] border-[2px] border-[#E7007C] rounded-full"
+              >
+                <i
+                  class="fa-solid fa-arrow-right rotate-[-45deg] scale-[1.2] text-[white]"
+                >
+                </i></div
+            ></a>
+          </div>
+          <img
+            src="./assets/imgs/rr-flourish.png"
+            class="absolute right-0 bottom-0 max-w-[300px] sm:max-w-[500px] lg:max-w-none"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Form Section  -->
+    <section
+      class="w-full max-w-[1920px] mx-auto wrapper bg-[#0a151c6a] pb-[70px] px-[20px] 1300:px-0"
+    >
+      <div
+        class="content pt-[75px] gap-[30px] 1100:gap-0 flex-col 1100:flex-row flex"
+      >
+        <div class="w-full 1100:max-w-[450px] 1300:max-w-[520px]">
+          <h3
+            class="font-montserrat text-[28px] sm:text-[40px] uppercase text-center 1100:text-start text-white 1300:text-[50px] font-[800] leading-[1]"
+          >
+            Would you like <br />
+            the latest from <br />
+            live out love?
+          </h3>
+        </div>
+        <div class="w-full grid sm:grid-cols-2 gap-[25px]">
+          <input
+            type="text"
+            class="h-[50px] sm:h-[70px] w-full outline-none text-[black] px-[30px]"
+            placeholder="FIRST NAME"
+          />
+          <input
+            type="text"
+            class="h-[50px] sm:h-[70px] w-full outline-none text-[black] px-[30px]"
+            placeholder="LAST NAME"
+          />
+          <input
+            type="text"
+            class="h-[50px] sm:h-[70px] w-full outline-none text-[black] px-[30px]"
+            placeholder="EMAIL ADDRESS"
+          />
+        </div>
+      </div>
+      <div
+        class="content flex items-center flex-col justify-center mt-[50px] sm:mt-[100px]"
+      >
+        <button
+          class="w-[200px] h-[65px] border-[2px] border-[white] text-[white]"
+        >
+          SIGN UP
+        </button>
+        <p
+          class="font-[300] mt-[30px] sm:mt-[60px] text-[#ffffff] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+        >
+          We respect your privacy.
+        </p>
+      </div>
+    </section>
+    <!-- Footer Section  -->
+    <footer
+      class="w-full wrapper bg-[#0a151c] max-w-[1920px] mx-auto pt-[60px] px-[20px] 1300:px-0"
+    >
+      <div
+        class="content mx-auto flex flex-col lg:flex-row gap-[40px] lg:gap-0 items-start"
+      >
+        <div
+          class="w-full lg:max-w-[460px] items-center lg:items-start flex flex-col gap-[30px] lg:gap-[50px]"
+        >
+          <img
+            src="./assets/imgs/white-logo.png"
+            class="max-w-[250px]"
+            alt=""
+          />
+          <p
+            class="font-[300] text-[#ffffff] tracking-[1.1px] sm:tracking-[1.2px] lg:text-start text-center leading-[1.2] sm:leading-[1.6]"
+          >
+            Together, we can unite our communities <br />
+            around kindness and love.
+          </p>
+          <button
+            class="w-[190px] h-[55px] border-[2px] border-[white] text-[white]"
+          >
+            HOW TO HELP
+          </button>
+        </div>
+        <div
+          class="w-full lg:max-w-[200px] flex flex-col justify-center items-center gap-[20px]"
+        >
+          <p
+            class="text-[#ffffff] font-[500] uppercase text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            HOW TO HELP
+          </p>
+          <a
+            href="#"
+            class="font-[300] text-[#ffffff] hover:text-[#ffffff9f] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Train with us
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-center text-[#ffffff] hover:text-[#ffffff9f] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.4]"
+          >
+            Live out Love <br />
+            in your city
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-center text-[#ffffff] hover:text-[#ffffff9f] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.4]"
+          >
+            Become a <br />
+            Shephred
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-center text-[#ffffff] hover:text-[#ffffff9f] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.4]"
+          >
+            Live out Love <br />
+            Store
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-center text-[#ffffff] hover:text-[#ffffff9f] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.4]"
+          >
+            Fundraise
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-center text-[#ffffff] hover:text-[#ffffff9f] tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.4]"
+          >
+            Send a check
+          </a>
+        </div>
+        <div
+          class="w-full lg:max-w-[350px] flex flex-col justify-center items-center gap-[20px]"
+        >
+          <p
+            class="text-[#ffffff] font-[500] uppercase text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Links
+          </p>
+          <a
+            href="#"
+            class="font-[300] text-[#ffffff] hover:text-[#ffffff9f] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Stories
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-[#ffffff] hover:text-[#ffffff9f] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            About Us
+          </a>
+          <a
+            href="#"
+            class="font-[300] text-[#ffffff] hover:text-[#ffffff9f] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Join Us
+          </a>
+        </div>
+        <div
+          class="w-full lg:max-w-[250px] flex flex-col justify-center items-center gap-[20px]"
+        >
+          <p
+            class="text-[#ffffff] font-[500] uppercase text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Contact
+          </p>
+          <a
+            href="#"
+            class="font-[300] text-[#ffffff] hover:text-[#ffffff9f] text-start tracking-[1.1px] sm:tracking-[1.2px] leading-[1.2] sm:leading-[1.6]"
+          >
+            Newsletter
+          </a>
+          <div class="flex items-center justify-center gap-[15px]">
+            <img src="./assets/imgs/twitter.png" class="max-w-[40px]" alt="" />
+            <img src="./assets/imgs/fbb.png" class="max-w-[40px]" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- Bottom  -->
+      <div
+        class="content h-[110px] flex items-center text-[white] justify-center mt-[10px]"
+      >
+        &#169; Live out Love 2024, All Rights Reserved
+      </div>
+    </footer>
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
