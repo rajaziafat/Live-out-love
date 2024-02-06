@@ -7,6 +7,7 @@
   "main": "tailwind.config.js",
   
   "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/input.css -o ./output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
